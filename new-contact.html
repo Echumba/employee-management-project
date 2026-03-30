@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<style>
+    body{
+        background-color: white;
+        margin: 0%;
+        align-items: center;
+        text-align: left;
+    }  
+    form{ 
+      
+    width: 80%;
+    margin: 40px;
+    border-top: 2px solid black;
+    border-left: 1px solid black;
+    border-bottom: 5px  solid red;
+    border-width: 30%;
+    }
+    fieldset{
+        border:none;
+        
+        background-color: rgba(255, 255, 255, 0.63);
+        padding: 20px;
+        width: 500px;
+        box-shadow:0 0 8px rgba(0,0,0,0.1) ;
+        align-items:center;
+        margin-top:20px;
+        
+    }
+    
+    label{
+        font-style: normal;
+        font-weight: bolder;
+        border-bottom: 5px;
+        padding: 15px;
+    }
+    .gender-group{
+        display: flex;
+        gap: 15px;
+    }
+    input[type="text"],input[type="email"],input[type="phone"],input[type="text"]{
+        width: 70%;
+        padding: 8px;
+
+
+    }
+    h1{
+        padding-left: 10px;
+    }
+
+    
+
+    
+</style>
+<body>
+    <form> 
+        <h1 style="font-size: large;" style="font-weight:bolder;" style="font-style: normal;">Add New Contact</h1>
+        <fieldset>
+                 
+
+                 
+                 <label for="id number">ID Number</label>
+            <input type="text" id="id number" name="enter" placeholder="Enter Identification Number"/></p>
+             <P><label for="fname"> First name:</label>
+            <input type="text" id="fname" name="name"  placeholder="Enter Firstname"></textarea></P>
+            <P></P><label for="lname"> Last name:</label>
+            <input type="text" id="lname" name="name" placeholder="Enter Lastname"/></P>
+            <label >Gender:</label>
+            <div class="gender-group">
+                <input type="radio" id="male"name="gender"/>
+                <label for="male">Male</label>
+                <input type="radio" id=" female" name="gender"/>
+                <label for="female">female</label>
+        
+            </div>
+           <p> <label for="phono"> Phone Number:</label>
+            <input type="phone" id="phono" name="phone" placeholder="+254---"/></p>
+            
+            <p><label for="email">Email:</label>
+             <input type="email" id="email" name="phone"  placeholder="Enter email"/></p>
+             <p>
+                <label for="address">Address:</label>
+                <input type="address" id="address" name="address" placeholder="Enter Address"/>
+             </p>
+            <p> <label for="DOB">Date Of Birth</label>
+            <input type="date" id="DOB" Name="date" required/></p>
+            <p>
+                <label>Position</label>
+                <select>
+                    <option>-Select position if official-</option>
+                    <option>Manager</option>
+                    <option>Supervisor</option>
+                    <option>Staff</option>
+                </select>
+            </p>
+            <button type="submit">Submit</button>
+        </fieldset>
+    </form>
+    
+</body>
+</html>

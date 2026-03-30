@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        font-family:Arial, Helvetica, sans-serif ;
+        padding: 20px;
+        border-left: 15px color(rgba(128, 128, 128, 0.849));
+    }
+    th{ text-align: left;
+         font-weight: bolder;
+         }
+         td{
+            text-align: left;
+            padding-bottom: 20px;
+            padding-right: 10px;
+            padding-top: 10px;
+            padding-left: 5px;
+         }
+         table,
+         th,td{
+            border-collapse: collapse;
+            margin-left: 7px;
+            border: 1px solid grey;
+         }
+         button{
+            border: none;
+            cursor: pointer;
+            margin: 2px;
+            border-radius: 4px;
+        
+         }
+         .details{
+            background-color:rgb(17, 113, 142);
+            color: white;
+         }
+         .edit{
+            background-color: rgb(225, 152, 17);
+            color: white;
+         }
+         .delete{
+            background-color: rgb(149, 44, 6);
+            color: white;
+         }
+</style>
+
+<body>
+    <table style="width: 100%;">
+        <tr>
+            <th>No</th>
+            <th>Name</th>
+            <th>Phone</th>
+            <th>Department</th>
+            <th>Email</th>
+           <th>Tools</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Ann Muige</td>
+            <td>+254734215678</td>
+            <td>logistics</td>
+            <td>annmuige32@gmail.com</td>
+            <td><button class="details"onclick="viewDetails(this)">Details</button>
+            <button class="edit" onclick="editEmployee()">Edit</button>
+            <button class="delete" onclick="deleteEmployee(this)">Delete</button></td>
+        </tr>
+         
+        <tr>
+            <td>2</td>
+            <td>Carol Nyaboke</td>
+            <td>+254799660976</td>
+            <td>IT and software</td>
+            <td>carolnyaboke@yahoo.com</td>
+            <td><button class="details"onclick="viewDetails(this)">Details</button>
+            <button class="edit" onclick="editEmployee()">Edit</button>
+            <button class="delete" onclick="deleteEmployee(this)">Delete</button></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Cecile Nyokabi Njoroge</td>
+            <td>+254712986578</td>
+            <td>Plant Opertions</td>
+            <td>cecilenyokabi7@gmail.com</td>
+            <td><button class="details"onclick="viewDetails(this)">Details</button>
+            <button class="edit" onclick="editEmployee()">Edit</button>
+            <button class="delete" onclick="deleteEmployee(this)">Delete</button></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Charles Onyango</td>
+            <td>+254790875434</td>
+            <td>Security</td>
+            <td>charlesonyango39@gmail.com</td>
+            <td><button class="details"onclick="viewDetails(this)">Details</button>
+            <button class="edit" onclick="editEmployee()">Edit</button>
+            <button class="delete" onclick="deleteEmployee(this)">Delete</button></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Christine Mogeni</td><br>
+            <td>+254722456734</td>
+            <td>logistics</td>
+            <td>christinemuigai0@gmail.com</td>
+            <td><button class="details"onclick="viewDetails(this)">Details</button>
+            <button class="edit" onclick="editEmployee()">Edit</button>
+            <button class="delete" onclick="deleteEmployee(this)">Delete</button></td>
+        </tr>
+    </table>
+    <script>
+        function viewDetails(button){
+            let row= button.parentElement.parentElement;
+            let name= row.cells[1].innerText;
+            let phone= row.cells[2].innerText;
+            let department= row.cells[3].innerText;
+            let email= row.cells[4].innerText;
+            alert("Name:" +name+"\n\n"+ "Phone:" + phone +"\n\n"+ "Department:" +department+"\n\n"+ "Email:" +email);
+        }
+        function editEmployee(){
+                alert("Edit employee ");
+            }
+
+        function deleteEmployee(button){
+            let confirmDelete= confirm("Are you sure you want to delete ?");
+            if(confirmDelete){
+                let row=button.parentElement.parentElement;
+                row.remove();
+            }
+            
+            
+
+        }
+
+    </script>
+</body>
+</html>
